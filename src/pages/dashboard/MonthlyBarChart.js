@@ -25,7 +25,7 @@ const barChartOptions = {
     enabled: false
   },
   xaxis: {
-    categories: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+    categories: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
     axisBorder: {
       show: false
     },
@@ -51,7 +51,7 @@ const MonthlyBarChart = () => {
 
   const [series] = useState([
     {
-      data: [80, 95, 70, 42, 65, 55, 78]
+      data: [2886, 4099, 3680, 6760, 5344, 7625, 9888]
     }
   ]);
 

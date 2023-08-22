@@ -6,26 +6,21 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Box, Link, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 
 // third-party
-import NumberFormat from 'react-number-format';
+// import NumberFormat from 'react-number-format';
 
 // project import
 import Dot from 'components/@extended/Dot';
 
-function createData(trackingNo, name, fat, carbs, protein) {
-  return { trackingNo, name, fat, carbs, protein };
+function createData(trackingNo, name,oraganisation, status) {
+  return { trackingNo, name,oraganisation, status };
 }
 
 const rows = [
-  createData(84564564, 'Camera Lens', 40, 2, 40570),
-  createData(98764564, 'Laptop', 300, 0, 180139),
-  createData(98756325, 'Mobile', 355, 1, 90989),
-  createData(98652366, 'Handset', 50, 1, 10239),
-  createData(13286564, 'Computer Accessories', 100, 1, 83348),
-  createData(86739658, 'TV', 99, 0, 410780),
-  createData(13256498, 'Keyboard', 125, 2, 70999),
-  createData(98753263, 'Mouse', 89, 2, 10570),
-  createData(98753275, 'Desktop', 185, 1, 98063),
-  createData(98753291, 'Chair', 100, 0, 14001)
+  createData(98652366, 'Monitor not working','Hotel', 0),
+  createData(98756325, 'Printer paper gets teared when printing','Beach House', 2),
+  createData(98756378, 'Mobile phones battery issues','Rest House' ,2),
+  createData(98652248, 'Water heater coil issues', 'Hotel',1),
+  
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -61,38 +56,32 @@ const headCells = [
     id: 'trackingNo',
     align: 'left',
     disablePadding: false,
-    label: 'Order No'
+    label: 'Tracking No'
   },
   {
     id: 'name',
     align: 'left',
     disablePadding: true,
-    label: 'Product Name'
+    label: 'Issue Description'
   },
   {
-    id: 'fat',
-    align: 'right',
-    disablePadding: false,
-    label: 'Total Order'
-  },
-  {
-    id: 'carbs',
+    id: 'organisation',
     align: 'left',
-    disablePadding: false,
-
+    disablePadding: true,
+    label: 'Organisation'
+  },
+  {
+    id: 'status',
+    align: 'left',
+    disablePadding: true,
     label: 'Status'
   },
-  {
-    id: 'protein',
-    align: 'right',
-    disablePadding: false,
-    label: 'Total Amount'
-  }
+ 
 ];
 
 // ==============================|| ORDER TABLE - HEADER ||============================== //
 
-function OrderTableHead({ order, orderBy }) {
+function TicketTableHead({ order, orderBy }) {
   return (
     <TableHead>
       <TableRow>
@@ -111,7 +100,7 @@ function OrderTableHead({ order, orderBy }) {
   );
 }
 
-OrderTableHead.propTypes = {
+TicketTableHead.propTypes = {
   order: PropTypes.string,
   orderBy: PropTypes.string
 };
@@ -125,15 +114,15 @@ const OrderStatus = ({ status }) => {
   switch (status) {
     case 0:
       color = 'warning';
-      title = 'Pending';
+      title = 'Assigned';
       break;
     case 1:
       color = 'success';
-      title = 'Approved';
+      title = 'Fixed';
       break;
     case 2:
       color = 'error';
-      title = 'Rejected';
+      title = 'Pending';
       break;
     default:
       color = 'primary';
@@ -154,7 +143,7 @@ OrderStatus.propTypes = {
 
 // ==============================|| ORDER TABLE ||============================== //
 
-export default function OrderTable() {
+export default function TicketTable() {
   const [order] = useState('asc');
   const [orderBy] = useState('trackingNo');
   const [selected] = useState([]);
@@ -184,7 +173,7 @@ export default function OrderTable() {
             }
           }}
         >
-          <OrderTableHead order={order} orderBy={orderBy} />
+          <TicketTableHead order={order} orderBy={orderBy} />
           <TableBody>
             {stableSort(rows, getComparator(order, orderBy)).map((row, index) => {
               const isItemSelected = isSelected(row.trackingNo);
@@ -206,12 +195,10 @@ export default function OrderTable() {
                     </Link>
                   </TableCell>
                   <TableCell align="left">{row.name}</TableCell>
-                  <TableCell align="right">{row.fat}</TableCell>
+                  <TableCell align="left">{row.oraganisation}</TableCell>
+
                   <TableCell align="left">
-                    <OrderStatus status={row.carbs} />
-                  </TableCell>
-                  <TableCell align="right">
-                    <NumberFormat value={row.protein} displayType="text" thousandSeparator prefix="Rs." />
+                    <OrderStatus status={row.status} />
                   </TableCell>
                 </TableRow>
               );

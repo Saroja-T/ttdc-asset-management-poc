@@ -149,19 +149,15 @@ const Notification = () => {
                       </ListItemAvatar>
                       <ListItemText
                         primary={
-                          <Typography variant="h6">
-                            It&apos;s{' '}
                             <Typography component="span" variant="subtitle1">
-                              Cristina danny&apos;s
-                            </Typography>{' '}
-                            birthday today.
-                          </Typography>
+                              New employee has been added to TTDC Coimbatore.
+                            </Typography>
                         }
                         secondary="2 min ago"
                       />
                       <ListItemSecondaryAction>
                         <Typography variant="caption" noWrap>
-                          3:00 AM
+                          22-08-2023
                         </Typography>
                       </ListItemSecondaryAction>
                     </ListItemButton>
@@ -179,18 +175,15 @@ const Notification = () => {
                       </ListItemAvatar>
                       <ListItemText
                         primary={
-                          <Typography variant="h6">
-                            <Typography component="span" variant="subtitle1">
-                              Aida Burg
-                            </Typography>{' '}
-                            commented your post.
+                          <Typography component="span" variant="subtitle1">
+                            TTDC Tirupur is requested for a new Equipment
                           </Typography>
                         }
-                        secondary="5 August"
+                        secondary="03:22 AM"
                       />
                       <ListItemSecondaryAction>
                         <Typography variant="caption" noWrap>
-                          6:00 PM
+                          18-08-2023
                         </Typography>
                       </ListItemSecondaryAction>
                     </ListItemButton>
@@ -208,18 +201,15 @@ const Notification = () => {
                       </ListItemAvatar>
                       <ListItemText
                         primary={
-                          <Typography variant="h6">
-                            Your Profile is Complete &nbsp;
-                            <Typography component="span" variant="subtitle1">
-                              60%
-                            </Typography>{' '}
+                          <Typography component="span" variant="subtitle1">
+                            You have recieved some new Purchase request.
                           </Typography>
                         }
-                        secondary="7 hours ago"
+                        secondary="04:54 PM"
                       />
                       <ListItemSecondaryAction>
                         <Typography variant="caption" noWrap>
-                          2:45 PM
+                          17-08-2023
                         </Typography>
                       </ListItemSecondaryAction>
                     </ListItemButton>
@@ -237,21 +227,15 @@ const Notification = () => {
                       </ListItemAvatar>
                       <ListItemText
                         primary={
-                          <Typography variant="h6">
-                            <Typography component="span" variant="subtitle1">
-                              Cristina Danny
-                            </Typography>{' '}
-                            invited to join{' '}
-                            <Typography component="span" variant="subtitle1">
-                              Meeting.
-                            </Typography>
+                          <Typography component="span" variant="subtitle1">
+                            Your total expense has been increased by 30 % for this month
                           </Typography>
                         }
-                        secondary="Daily scrum meeting time"
+                        secondary="02:23 PM"
                       />
                       <ListItemSecondaryAction>
                         <Typography variant="caption" noWrap>
-                          9:10 PM
+                          16-08-2023
                         </Typography>
                       </ListItemSecondaryAction>
                     </ListItemButton>

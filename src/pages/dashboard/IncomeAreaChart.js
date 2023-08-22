@@ -45,8 +45,8 @@ const IncomeAreaChart = ({ slot }) => {
       xaxis: {
         categories:
           slot === 'month'
-            ? ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-            : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            ? ['2012','2013','2014','2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023']
+            : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
         labels: {
           style: {
             colors: [
@@ -89,11 +89,11 @@ const IncomeAreaChart = ({ slot }) => {
 
   const [series, setSeries] = useState([
     {
-      name: 'Page Views',
+      name: 'Maintenance',
       data: [0, 86, 28, 115, 48, 210, 136]
     },
     {
-      name: 'Sessions',
+      name: 'New Assets',
       data: [0, 43, 14, 56, 24, 105, 68]
     }
   ]);
@@ -101,12 +101,12 @@ const IncomeAreaChart = ({ slot }) => {
   useEffect(() => {
     setSeries([
       {
-        name: 'Page Views',
-        data: slot === 'month' ? [76, 85, 101, 98, 87, 105, 91, 114, 94, 86, 115, 35] : [31, 40, 28, 51, 42, 109, 100]
+        name: 'Maintenance',
+        data: slot === 'month' ? [760000, 850000, 1010000, 980000, 870000, 1050000, 910000, 1140000, 940000, 860000, 1150000, 350000] : [310000, 400000, 280000, 510000, 420000, 1090000, 1000000]
       },
       {
-        name: 'Sessions',
-        data: slot === 'month' ? [110, 60, 150, 35, 60, 36, 26, 45, 65, 52, 53, 41] : [11, 32, 45, 32, 34, 52, 41]
+        name: 'New Assets',
+        data: slot === 'month' ? [1100000, 600000, 1500000, 350000, 600000, 360000, 260000, 450000, 650000, 520000, 530000, 410000] : [110000, 320000, 450000, 320000, 340000, 520000, 410000]
       }
     ]);
   }, [slot]);

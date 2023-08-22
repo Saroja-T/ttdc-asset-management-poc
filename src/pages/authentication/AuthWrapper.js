@@ -7,15 +7,22 @@ import { Box, Grid } from '@mui/material';
 import AuthCard from './AuthCard';
 import Logo from 'components/Logo';
 import AuthFooter from 'components/cards/AuthFooter';
+// import avatar from 'assets/images/auth/bgpic.jpeg';
 
 // assets
-import AuthBackground from 'assets/images/auth/AuthBackground';
+// import AuthBackground from 'assets/images/auth/AuthBackground';
 
 // ==============================|| AUTHENTICATION - WRAPPER ||============================== //
 
 const AuthWrapper = ({ children }) => (
-  <Box sx={{ minHeight: '100vh' }}>
-    <AuthBackground />
+  <div style = {{
+   
+    backgroundImage:
+    'url("https://www.tamilnadutourism.tn.gov.in/img/pages/large-desktop/thiruvalluvar-statue-kanyakumari-1655196623_b2c20ff64e13e74324d6.webp")',
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+ }}>
+<Box sx={{ minHeight: '100vh' }}>
     <Grid
       container
       direction="column"
@@ -46,6 +53,8 @@ const AuthWrapper = ({ children }) => (
       </Grid>
     </Grid>
   </Box>
+  </div>
+  
 );
 
 AuthWrapper.propTypes = {
