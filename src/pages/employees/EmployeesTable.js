@@ -4,8 +4,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 // material-ui
 import { Box, Link, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-
+import EditIcon from '@mui/icons-material/Edit';
 // third-party
 // import NumberFormat from 'react-number-format';
 
@@ -75,31 +74,31 @@ const headCells = [
     id: 'trackingNo',
     align: 'left',
     disablePadding: false,
-    label: 'S.No'
+    label: 'Employee ID'
   },
   {
     id: 'name',
     align: 'left',
     disablePadding: true,
-    label:'Department'
+    label:'Name'
   },
   {
     id: 'fat',
     align: 'left',
     disablePadding: false,
-    label: 'Category'
+    label: 'Role'
   },
   {
     id: 'carbs',
     align: 'left',
     disablePadding: false,
-    label: 'Location'
+    label: 'Department'
   },
   {
     id: 'protein',
     align: 'center',
     disablePadding: false,
-    label: 'Counts'
+    label: 'Location'
   },
   {
     id: 'action',
@@ -113,7 +112,7 @@ const headCells = [
 
 function OrderTableHead({ order, orderBy }) {
   return (
-    <TableHead sx={{ backgroundColor: "#632b8f"}} >
+    <TableHead sx={{ backgroundColor: "#15779e"}} >
       <TableRow>
         {headCells.map((headCell) => (
           <TableCell
@@ -173,7 +172,7 @@ OrderStatus.propTypes = {
 
 // ==============================|| ORDER TABLE ||============================== //
 
-export default function OrderTable() {
+export default function EmployeesTable() {
   const [order] = useState('asc');
   const [orderBy] = useState('trackingNo');
   const [selected] = useState([]);
@@ -244,11 +243,11 @@ export default function OrderTable() {
                   key={row.trackingNo}
                   selected={isItemSelected}
                   style={{
-                    backgroundColor: row.isActive ? '#e7d8f3' : '',
+                    backgroundColor: row.isActive ? '#d2eef9' : '',
                     }}
                     onClick = {() => handleColorChange(row.trackingNo)} 
                 >
-                  <TableCell component="th" id={labelId} scope="row" align="left ">
+                  <TableCell component="th" id={labelId} scope="row" align="center ">
                     <Link color="secondary" component={RouterLink} to="">
                       {row.trackingNo}
                     </Link>
@@ -256,7 +255,7 @@ export default function OrderTable() {
                   <TableCell align="left"  style={{
                         whiteSpace: "nowrap",
                         textOverflow: "ellipsis",
-                        width: "200px",
+                        width: "300px",
                         display: "block",
                         overflow: "hidden"
                       }}>{row.name}</TableCell>
@@ -264,7 +263,7 @@ export default function OrderTable() {
                   <TableCell align="left">{row.carbs}</TableCell>
                   <TableCell align="center">{row.protein}</TableCell>
                   <TableCell align="center">
-                    <ArrowForwardIosIcon fontSize="small" sx={{ color: "#23ace2" }}/>
+                    <EditIcon fontSize="small" sx={{ color: "#23ace2" }}/>
                   </TableCell>
 
                   {/* <TableCell align="left">
