@@ -1,10 +1,11 @@
 // assets
-import { LoginOutlined, ProfileOutlined } from '@ant-design/icons';
+import { LoginOutlined, ProfileOutlined,UserOutlined } from '@ant-design/icons';
 
 // icons
 const icons = {
   LoginOutlined,
-  ProfileOutlined
+  ProfileOutlined,
+  UserOutlined
 };
 
 // ==============================|| MENU ITEMS - EXTRA PAGES ||============================== //
@@ -23,6 +24,7 @@ const pages = {
       target: false
     },
     {
+<<<<<<< HEAD
       id: 'login1',
       title: 'Login',
       type: 'item',
@@ -38,6 +40,24 @@ const pages = {
       icon: icons.ProfileOutlined,
       target: true
     }
+=======
+      id: 'vendors',
+      title: 'Vendors',
+      type: 'item',
+      url: '/vendors',
+      icon: icons.ProfileOutlined,
+      target: false
+    },
+    {
+      id: 'employee',
+      title: 'Employees',
+      type: 'item',
+      url: '/employees',
+      icon: icons.UserOutlined,
+      target: false
+    }
+   
+>>>>>>> f416d98ad35bc6e6f45a0695137e8825c7e32b0f
   ]
 };
 
