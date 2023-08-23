@@ -1,3 +1,6 @@
+
+// import { useState } from 'react';
+
 // material-ui
 import {
   Grid,
@@ -11,7 +14,10 @@ import {
 // project import
 import OrdersTable from './OrdersTable';
 import MainCard from 'components/MainCard';
+import assetData from '../../assets/local-json/assetsData.json'
 
+
+// const [assetData, setAssetData] = useState(assets);
 
 
 // ==============================|| DASHBOARD - DEFAULT ||============================== //
@@ -40,8 +46,20 @@ const AssetsDefault = () => {
         </Grid>
         <MainCard sx={{ mt: 2 }} content={false}>
         <Paper style={{maxHeight: 500, overflow: 'auto'}}>
+
+        
         <List sx={{ p: 0, '& .MuiListItemButton-root': { py: 2 } }} >
-            <ListItemButton divider>
+              {
+            assetData && assetData.length>0 && assetData.map((item)=>
+            <>
+              <ListItemButton divider>
+                <ListItemText primary="Company Expenses Ratio" />
+                <Typography variant="h5">{item.name}</Typography>
+              </ListItemButton>
+            </>
+            )
+          }
+            {/* <ListItemButton divider>
               <ListItemText primary="Company Expenses Ratio" />
               <Typography variant="h5">20</Typography>
             </ListItemButton>
@@ -96,7 +114,7 @@ const AssetsDefault = () => {
             <ListItemButton divider>
               <ListItemText primary="Company Expenses Ratio" />
               <Typography variant="h5">20</Typography>
-            </ListItemButton>
+            </ListItemButton> */}
 
           </List>
           </Paper>
