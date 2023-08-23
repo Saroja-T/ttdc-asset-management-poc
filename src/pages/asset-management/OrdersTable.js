@@ -248,7 +248,7 @@ export default function OrderTable() {
                     }}
                     onClick = {() => handleColorChange(row.trackingNo)} 
                 >
-                  <TableCell component="th" id={labelId} scope="row" align="left ">
+                  <TableCell component="th" id={labelId} scope="row" align="left">
                     <Link color="secondary" component={RouterLink} to="">
                       {row.trackingNo}
                     </Link>
