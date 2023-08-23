@@ -24,7 +24,6 @@ const pages = {
       target: false
     },
     {
-<<<<<<< HEAD
       id: 'login1',
       title: 'Login',
       type: 'item',
@@ -39,8 +38,8 @@ const pages = {
       url: '/register',
       icon: icons.ProfileOutlined,
       target: true
-    }
-=======
+    },
+    {
       id: 'vendors',
       title: 'Vendors',
       type: 'item',
@@ -57,7 +56,6 @@ const pages = {
       target: false
     }
    
->>>>>>> f416d98ad35bc6e6f45a0695137e8825c7e32b0f
   ]
 };
 
