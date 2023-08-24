@@ -29,16 +29,16 @@ function createData(trackingNo, name, fat, carbs, protein,isActive) {
 // ];
 
 const rows = [
-   createData(1, 'Government Botanical Garden', 'Attractions','Ooty',500, true),
-   createData(2, 'Hotel Tamil Nadu','Hotels','Tirunelveli', 300,false),
-   createData(3, '4- Days Kodaikanal - Trichy Tour','Tour&Packages','Kodaikanal',98,false),
-   createData(4, 'Covelong Beach','Beach','Covelong', 400,false),
-   createData(5, 'One Day Thiruvannamalai Girivalam Tour','Tour&Packages','Thiruvannamalai',189,false),
-   createData(6, 'Hotel Tamil Nadu - Kancheepuram','Hotels','Kancheepuram',123,false),
-   createData(7, 'Pichavaram Backwaters','Backwaters','Pichavaram', 670,false),
-   createData(8, 'TamilNadu Tourism Development Corporation Ltd.','Tourism booking service','Coimbatore', 340,false),
-   createData(9, 'T N Tourist Information Centre','Tourism booking service','Chennai', 550,false),
-   createData(10,'Kamarajar Memorial House','Museums','Chennai', 680,false),
+   createData("E001", 'Vaiko','Accounting','Attractions','Ooty'),
+   createData("E002", 'Thol Thirumaavalavan','Product Manager','Hotels','Tirunelveli'),
+   createData("E003", 'Thirunavukkarasar','Marketing management','Tour&Packages','Kodaikanal' ),
+   createData("E004", 'Thangam Thennarasu','Chief Executive Officer','Beach','Covelong'),
+   createData("E005", 'Tamilaruvi Manian','Chief Operating Officer','Tour&Packages','Thiruvannamalai'),
+   createData("E006", 'Paarivendhar','Administrative assistant','Hotels','Kancheepuram'),
+   createData("E007", 'Thalikottai Raju Baalu','Customer service representative','Backwaters','Pichavaram' ),
+   createData("E008", 'Elumalai','Marketing Specialist','Tourism booking service','Tamilnadu Tourism Complex,Varaja Road'),
+   createData("E009", 'Nitish Kumar','Business Analyst','Tourism booking service','Wallajah Road, 2,Wallahjah'),
+   createData("E0011",'P Chidambaram','Senior management','Museums','Chennai')
   ];
 
 function descendingComparator(a, b, orderBy) {
@@ -190,7 +190,6 @@ export default function EmployeesTable() {
       setMyRecords((prevState) => {
         return prevState.map((item) => {
           if(item.trackingNo === id) {
-            console.log("===>"+item.isActive);
             return {...item, isActive: true}
           }else {
             return {...item, isActive: false}
@@ -199,7 +198,6 @@ export default function EmployeesTable() {
       })
     }
     useEffect(()=>{
-      console.log(myRecords);
     },[myRecords])
 
   return (

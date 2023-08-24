@@ -32,6 +32,7 @@ const TicketsDefault = () => {
     const handleOpen = () => {
         setOpen(true);
     };
+    
     const style = {
       position: 'absolute',
       top: '50%',
