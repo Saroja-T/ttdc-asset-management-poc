@@ -14,6 +14,9 @@ const VendorsDefault = Loadable(lazy(() => import('pages/vendors')));
 const EmployeesDefault = Loadable(lazy(() => import('pages/employees')));
 const TicketsDefault = Loadable(lazy(() => import('pages/tickets')));
 
+const MaintenanceDefault = Loadable(lazy(() => import('pages/maintenance')));
+const ReportsDefault = Loadable(lazy(() => import('pages/reports')));
+const SettingsDefault = Loadable(lazy(() => import('pages/settings')));
 
 // render - utilities
 const Typography = Loadable(lazy(() => import('pages/components-overview/Typography')));
@@ -63,6 +66,18 @@ const MainRoutes = {
     {
       path: 'tickets',
       element: <TicketsDefault />
+    },
+    {
+      path: 'reports',
+      element: <ReportsDefault />
+    },
+    {
+      path: 'settings',
+      element: <SettingsDefault />
+    },
+    {
+      path: 'maintenance',
+      element: <MaintenanceDefault />
     },
     {
       path: 'shadow',

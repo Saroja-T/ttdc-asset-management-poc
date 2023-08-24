@@ -1,12 +1,16 @@
 // assets
-import { LoginOutlined, ProfileOutlined,UserOutlined,SnippetsOutlined } from '@ant-design/icons';
+import { LoginOutlined, ProfileOutlined,UserOutlined,BarcodeOutlined, AntDesignOutlined,
+  SettingOutlined } from '@ant-design/icons';
 
 // icons
 const icons = {
   LoginOutlined,
   ProfileOutlined,
   UserOutlined,
-  SnippetsOutlined
+  SnippetsOutlined,
+  BarcodeOutlined,
+  AntDesignOutlined,
+  SettingOutlined
 };
 
 // ==============================|| MENU ITEMS - EXTRA PAGES ||============================== //
@@ -46,6 +50,27 @@ const pages = {
       type: 'item',
       url: '/tickets',
       icon: icons.SnippetsOutlined,
+      id: 'maintenance',
+      title: 'Maintenance',
+      type: 'item',
+      url: '/maintenance',
+      icon: icons.AntDesignOutlined,
+      target: false
+    },
+    {
+      id: 'reports',
+      title: 'Reports',
+      type: 'item',
+      url: '/reports',
+      icon: icons.BarcodeOutlined,
+      target: false
+    },
+    {
+      id: 'settings',
+      title: 'Settings',
+      type: 'item',
+      url: '/settings',
+      icon: icons.SettingOutlined,
       target: false
     }
    
