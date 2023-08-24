@@ -1,11 +1,12 @@
 // assets
-import { LoginOutlined, ProfileOutlined,UserOutlined } from '@ant-design/icons';
+import { LoginOutlined, ProfileOutlined,UserOutlined,SnippetsOutlined } from '@ant-design/icons';
 
 // icons
 const icons = {
   LoginOutlined,
   ProfileOutlined,
-  UserOutlined
+  UserOutlined,
+  SnippetsOutlined
 };
 
 // ==============================|| MENU ITEMS - EXTRA PAGES ||============================== //
@@ -37,6 +38,14 @@ const pages = {
       type: 'item',
       url: '/employees',
       icon: icons.UserOutlined,
+      target: false
+    },
+    {
+      id: 'tickets',
+      title: 'Tickets',
+      type: 'item',
+      url: '/tickets',
+      icon: icons.SnippetsOutlined,
       target: false
     }
    

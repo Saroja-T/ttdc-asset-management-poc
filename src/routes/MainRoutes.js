@@ -12,6 +12,8 @@ const SamplePage = Loadable(lazy(() => import('pages/extra-pages/SamplePage')));
 const AssetsDefault = Loadable(lazy(() => import('pages/asset-management')));
 const VendorsDefault = Loadable(lazy(() => import('pages/vendors')));
 const EmployeesDefault = Loadable(lazy(() => import('pages/employees')));
+const TicketsDefault = Loadable(lazy(() => import('pages/tickets')));
+
 
 // render - utilities
 const Typography = Loadable(lazy(() => import('pages/components-overview/Typography')));
@@ -57,6 +59,10 @@ const MainRoutes = {
     {
       path: 'employees',
       element: <EmployeesDefault />
+    },
+    {
+      path: 'tickets',
+      element: <TicketsDefault />
     },
     {
       path: 'shadow',
