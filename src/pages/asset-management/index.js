@@ -1,5 +1,5 @@
 
-// import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 // material-ui
 import {
@@ -17,12 +17,21 @@ import MainCard from 'components/MainCard';
 import assetData from '../../assets/local-json/assetsData.json'
 
 
-// const [assetData, setAssetData] = useState(assets);
 
+
+const AssetsDefault = () => {
+
+
+const [assetId, setAssetId] = useState(1);
+useEffect(()=>{
+  console.log("================>",assetId);
+},[assetId])
 
 // ==============================|| DASHBOARD - DEFAULT ||============================== //
 
-const AssetsDefault = () => {
+function  handleLanguage (value){
+    setAssetId(value);
+  }
 
   return (
     <Grid container rowSpacing={4.5} columnSpacing={2.75} >
@@ -34,13 +43,13 @@ const AssetsDefault = () => {
       <Grid item xs={12} md={7} lg={8}>
         
         <MainCard sx={{ mt: 3 }} content={false}>
-          <OrdersTable />
+          <OrdersTable  onSelectLanguage={handleLanguage} />
         </MainCard>
       </Grid>
       <Grid item xs={12} md={5} lg={4} style={{ marginTop: "20px" }} >
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid item>
-            <Typography variant="h4" color="#632b8f">Government Botanical Garden</Typography>
+            <Typography variant="h4" color="#632b8f">{assetData[assetId-1].name}</Typography>
           </Grid>
           <Grid item />
         </Grid>
@@ -50,11 +59,11 @@ const AssetsDefault = () => {
         
         <List sx={{ p: 0, '& .MuiListItemButton-root': { py: 2 } }} >
               {
-            assetData && assetData.length>0 && assetData.map((item)=>
+            assetData && assetData[assetId-1].assets.length>0 && assetData[assetId-1].assets.map((item)=>
             <>
               <ListItemButton divider>
-                <ListItemText primary="Company Expenses Ratio" />
-                <Typography variant="h5">{item.name}</Typography>
+                <ListItemText primary={item.assets_name} />
+                <Typography variant="h5">{item.count}</Typography>
               </ListItemButton>
             </>
             )

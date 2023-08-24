@@ -36,10 +36,10 @@ export default function VendorsDefault() {
                   style={{
                     backgroundColor: randomColor()
                   }}/>
-                  <Typography level="title-md" align="center">Ramesh  Babu</Typography>
+                  <Typography level="title-md" align="center">Ajith</Typography>
                 </Stack>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Address :</strong> 20 - 14, 3rd Floor,Xavier north street, Kottar, Nagercoil, Tamil Nadu 629002p</Typography>
-                <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Seating and Shelters</Typography>
+                <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>laptops, monitors</Typography>
           </Stack>            
         </CardContent>
       </Card>
@@ -55,10 +55,10 @@ export default function VendorsDefault() {
                   style={{
                     backgroundColor: randomColor()
                   }}/>
-                  <Typography level="title-md" align="center">Ramesh  Babu</Typography>
+                  <Typography level="title-md" align="center">John Cena</Typography>
                 </Stack>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Address :</strong> 15 - 20, ground Floor, West cross street, Near SRS Mall, Coimbatore, Tamil Nadu 641018</Typography>
-                <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Kitchen Facilities,Break Rooms</Typography>
+                <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong> Refrigerators, microwaves, coffee machines</Typography>
           </Stack>            
         </CardContent>
       </Card>
@@ -74,10 +74,10 @@ export default function VendorsDefault() {
                   style={{
                     backgroundColor: randomColor()
                   }}/>
-                  <Typography level="title-md" align="center">Ramesh  Babu</Typography>
+                  <Typography level="title-md" align="center">Virat Kohli</Typography>
                 </Stack>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Address :</strong> 20, ground Floor, North street, Near ABT parcel service,Chennai, Tamil Nadu 6000028</Typography>
-                <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Office Supplies,Communication Tools</Typography>
+                <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Pens, paper, notebooks, staplers, tape</Typography>
           </Stack>            
         </CardContent>
       </Card>
@@ -93,10 +93,10 @@ export default function VendorsDefault() {
                   style={{
                     backgroundColor: randomColor()
                   }}/>
-                  <Typography level="title-md" align="center">Ramesh  Babu</Typography>
+                  <Typography level="title-md" align="center">Rohit Sharma</Typography>
                 </Stack>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Address :</strong> 109/67, 1st Floor, service road street, madurai, Tamil Nadu 641019</Typography>
-                <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Art and Decor</Typography>
+                <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Sculptures, murals, and artistic installations</Typography>
           </Stack>            
         </CardContent>
       </Card>
@@ -111,7 +111,7 @@ export default function VendorsDefault() {
                   style={{
                     backgroundColor: randomColor()
                   }}/>
-                  <Typography level="title-md" align="center">Ramesh  Babu</Typography>
+                  <Typography level="title-md" align="center">Jasprit Bumrah</Typography>
                 </Stack>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Address :</strong> 965,Race course street, Coimbatore, Tamil Nadu 641018</Typography>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Gyms, pools, spas</Typography>
@@ -129,10 +129,10 @@ export default function VendorsDefault() {
                   style={{
                     backgroundColor: randomColor()
                   }}/>
-                  <Typography level="title-md" align="center">Ramesh  Babu</Typography>
+                  <Typography level="title-md" align="center">ABD Viliers</Typography>
                 </Stack>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Address :</strong> 788, ground Floor, Rojar Feder street, highways, Nagapattanam, Tamil Nadu 645018</Typography>
-                <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Network Infrastructure,Storage</Typography>
+                <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Routers, switches, and Wi-Fi access points</Typography>
           </Stack>            
         </CardContent>
       </Card>
@@ -147,10 +147,10 @@ export default function VendorsDefault() {
                   style={{
                     backgroundColor: randomColor()
                   }}/>
-                  <Typography level="title-md" align="center">Ramesh  Babu</Typography>
+                  <Typography level="title-md" align="center">ABD Viliers</Typography>
                 </Stack>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Address :</strong> 123, ground Floor, main corner street, Near main road, Ariyalur, Tamil Nadu 612018</Typography>
-                <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Information centers, ticket booths</Typography>
+                <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Equipped with tables, chairs, presentation tools, </Typography>
           </Stack>            
         </CardContent>
       </Card>
@@ -165,7 +165,7 @@ export default function VendorsDefault() {
                   style={{
                     backgroundColor: randomColor()
                   }}/>
-                  <Typography level="title-md" align="center">Ramesh  Babu</Typography>
+                  <Typography level="title-md" align="center">Seth Rollings</Typography>
                 </Stack>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Address :</strong> 895, 1st Floor, Newton street, Near Apple Shop,chennai, Tamil Nadu 6001018</Typography>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Handrails, barriers, and warning signs</Typography>
@@ -183,7 +183,7 @@ export default function VendorsDefault() {
                   style={{
                     backgroundColor: randomColor()
                   }}/>
-                  <Typography level="title-md" align="center">Ramesh  Babu</Typography>
+                  <Typography level="title-md" align="center">Dean Ambros</Typography>
                 </Stack>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Address :</strong> 5689, 3rd  Floor, West Florida street, Near cross cut road, Coimbatore, Tamil Nadu 641018</Typography>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Reception desk, seating areas,</Typography>
@@ -201,10 +201,10 @@ export default function VendorsDefault() {
                   style={{
                     backgroundColor: randomColor()
                   }}/>
-                  <Typography level="title-md" align="center">Ramesh  Babu</Typography>
+                  <Typography level="title-md" align="center">KL Rahul</Typography>
                 </Stack>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Address :</strong> 155, ground Floor, short cross street, Near abs shoes, Chennai, Tamil Nadu 610018</Typography>
-                <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Assistance with bookings, recommendations</Typography>
+                <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong> Benches, picnic tables, gazebos</Typography>
           </Stack>            
         </CardContent>
       </Card>
@@ -219,14 +219,13 @@ export default function VendorsDefault() {
                   style={{
                     backgroundColor: randomColor()
                   }}/>
-                  <Typography level="title-md" align="center">Ramesh  Babu</Typography>
+                  <Typography level="title-md" align="center">Riyaz Ahamad</Typography>
                 </Stack>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Address :</strong> 56,4th Floor, East cross street, Near kvp textiles, Coimbatore, Tamil Nadu 641018</Typography>
                 <Typography level="title-md" style={{marginTop:"10px", marginLeft:"10px"}}><strong>Assets :</strong>Lounge areas, sofas, recreational items,</Typography>
           </Stack>            
         </CardContent>
       </Card>
-
 
 
 

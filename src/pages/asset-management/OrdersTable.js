@@ -30,16 +30,16 @@ function createData(trackingNo, name, fat, carbs, protein,isActive) {
 // ];
 
 const rows = [
-   createData(1, 'Government Botanical Garden', 'Attractions','Ooty',500, true),
-   createData(2, 'Hotel Tamil Nadu','Hotels','Tirunelveli', 300,false),
-   createData(3, '4- Days Kodaikanal - Trichy Tour','Tour&Packages','Kodaikanal',98,false),
-   createData(4, 'Covelong Beach','Beach','Covelong', 400,false),
-   createData(5, 'One Day Thiruvannamalai Girivalam Tour','Tour&Packages','Thiruvannamalai',189,false),
-   createData(6, 'Hotel Tamil Nadu - Kancheepuram','Hotels','Kancheepuram',123,false),
-   createData(7, 'Pichavaram Backwaters','Backwaters','Pichavaram', 670,false),
-   createData(8, 'TamilNadu Tourism Development Corporation Ltd.','Tourism booking service','Coimbatore', 340,false),
-   createData(9, 'T N Tourist Information Centre','Tourism booking service','Chennai', 550,false),
-   createData(10,'Kamarajar Memorial House','Museums','Chennai', 680,false),
+   createData(1, 'Government Botanical Garden', 'Attractions','Ooty',1500, true),
+   createData(2, 'Hotel Tamil Nadu','Hotels','Tirunelveli', 1300,false),
+   createData(3, '4- Days Kodaikanal - Trichy Tour','Tour&Packages','Kodaikanal',1098,false),
+   createData(4, 'Covelong Beach','Beach','Covelong', 1400,false),
+   createData(5, 'One Day Thiruvannamalai Girivalam Tour','Tour&Packages','Thiruvannamalai',1089,false),
+   createData(6, 'Hotel Tamil Nadu - Kancheepuram','Hotels','Kancheepuram',1203,false),
+   createData(7, 'Pichavaram Backwaters','Backwaters','Pichavaram', 1670,false),
+   createData(8, 'TamilNadu Tourism Development Corporation Ltd.','Tourism booking service','Coimbatore', 1340,false),
+   createData(9, 'T N Tourist Information Centre','Tourism booking service','Chennai', 2550,false),
+   createData(10,'Kamarajar Memorial House','Museums','Chennai', 1680,false),
   ];
 
 function descendingComparator(a, b, orderBy) {
@@ -173,7 +173,7 @@ OrderStatus.propTypes = {
 
 // ==============================|| ORDER TABLE ||============================== //
 
-export default function OrderTable() {
+const OrderTable = (props) =>{
   const [order] = useState('asc');
   const [orderBy] = useState('trackingNo');
   const [selected] = useState([]);
@@ -181,7 +181,7 @@ export default function OrderTable() {
   const isSelected = (trackingNo) => selected.indexOf(trackingNo) !== -1;
 
   const formatData = (items) => {
-    return items.map((item) => ({...item, isActive: false}))
+    return items.map((item) => ({...item, isActive: item.isActive}))
   }
 
   const [myRecords, setMyRecords] = useState(formatData(rows))
@@ -191,7 +191,7 @@ export default function OrderTable() {
       setMyRecords((prevState) => {
         return prevState.map((item) => {
           if(item.trackingNo === id) {
-            console.log("===>"+item.isActive);
+            props.onSelectLanguage(item.trackingNo);            
             return {...item, isActive: true}
           }else {
             return {...item, isActive: false}
@@ -264,7 +264,7 @@ export default function OrderTable() {
                   <TableCell align="left">{row.carbs}</TableCell>
                   <TableCell align="center">{row.protein}</TableCell>
                   <TableCell align="center">
-                    <ArrowForwardIosIcon fontSize="small" sx={{ color: "#23ace2" }}/>
+                    <ArrowForwardIosIcon fontSize="small" sx={{ color: "#632b8f" }}/>
                   </TableCell>
 
                   {/* <TableCell align="left">
@@ -282,3 +282,4 @@ export default function OrderTable() {
     </Box>
   );
 }
+export default OrderTable;
