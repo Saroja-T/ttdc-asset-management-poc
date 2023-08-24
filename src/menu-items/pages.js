@@ -1,6 +1,6 @@
 // assets
 import { LoginOutlined, ProfileOutlined,UserOutlined,BarcodeOutlined, AntDesignOutlined,
-  SettingOutlined } from '@ant-design/icons';
+  SettingOutlined,SnippetsOutlined } from '@ant-design/icons';
 
 // icons
 const icons = {
@@ -50,6 +50,7 @@ const pages = {
       type: 'item',
       url: '/tickets',
       icon: icons.SnippetsOutlined,
+    },{
       id: 'maintenance',
       title: 'Maintenance',
       type: 'item',
